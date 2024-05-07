@@ -1,0 +1,57 @@
+{
+  "Format": "2.0.6",
+  "ConfigSchema": {
+    "Flowers": {
+      "AllowValues": "true, false",
+      "Default": "false",
+      "Description": "Flower vines."
+    },
+    "Color": {
+      "AllowValues": "w, p, b",
+      "Default": "w",
+      "Description": "Fence Colour."
+    },
+    "Gate type": {
+      "AllowValues": "flowers, normal, vines",
+      "Default": "normal",
+      "Description": "Gate type."
+    }
+  },
+  "Changes": [
+    {
+      "Action": "EditImage",
+      "Target": "LooseSprites/Fence1",
+      "FromFile": "assets/{{Color}}_{{season}}_{{Gate type}}.png",
+      "When": {
+         "Flowers": "false"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "LooseSprites/Fence1",
+      "FromFile": "assets/wf_{{season}}_{{Gate type}}.png",
+      "When": {
+         "Flowers": "true",
+         "Color": "w"
+        }
+      },
+      {
+        "Action": "EditImage",
+        "Target": "LooseSprites/Fence1",
+        "FromFile": "assets/bf_{{season}}_{{Gate type}}.png",
+        "When": {
+           "Flowers": "true",
+           "Color": "b"
+          }
+        },
+        {
+          "Action": "EditImage",
+          "Target": "LooseSprites/Fence1",
+          "FromFile": "assets/pf_{{season}}_{{Gate type}}.png",
+          "When": {
+             "Flowers": "true",
+             "Color": "p"
+        }
+      }
+    ]
+  }

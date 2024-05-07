@@ -1,5 +1,5 @@
 {
-  "Format": "2.0.6",
+  "Format": "2.0.0-unofficial.1-mnmkro",
   "ConfigSchema": {
     "Flowers": {
       "AllowValues": "true, false",
